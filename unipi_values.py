@@ -33,6 +33,7 @@ products = {
   '1286': Product(1286, 'E412', dt='unipi_e412' , udev='e412' ),
   '1542': Product(1542, 'E413', dt='unipi_e413' , udev='e413' ),
   '1798': Product(1798, 'E414', dt='unipi_e414' , udev='e414' ),
+  '2054': Product(2054, 'E415', dt='unipi_e415' , udev='e415' ),
 }
 
 boards = {
@@ -44,6 +45,10 @@ boards = {
     }, has_watchdog1='1' , has_lte='1' , has_tpm='1' ),
   '204': Board(204, 'UDELAB04',{
     }, has_watchdog1='1' , has_lte='1' , has_tpm='1' ),
+  '205': Board(205, 'UDELAB05',{
+    }, has_watchdog1='1' , has_tpm='1' ),
+  '206': Board(206, 'UDELAB06',{
+    }, has_watchdog1='1' , has_tpm='1' ),
 }
 
 # Family names
