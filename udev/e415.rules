@@ -2,14 +2,6 @@
 
 
 ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/act-led", RUN+="/bin/sh -ec 'echo timer > /sys/$${DEVPATH}/trigger && echo 50 > /sys/$${DEVPATH}/delay_off && echo 2000 > /sys/$${DEVPATH}/delay_on || exit 0"
-ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/wifi-led", RUN+="/bin/sh -ec 'echo wlan0 > /sys/$${DEVPATH}/device_name && echo 1 > /sys/$${DEVPATH}/link || exit 0'"
-
-ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/x1-led", RUN+="/usr/lib/unipi/uhelper '' ULED1 1 $name"
-ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/x2-led", RUN+="/usr/lib/unipi/uhelper '' ULED2 1 $name"
-ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/x3-led", RUN+="/usr/lib/unipi/uhelper '' ULED3 1 $name"
-ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/x4-led", RUN+="/usr/lib/unipi/uhelper '' ULED4 1 $name"
-ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/x5-led", RUN+="/usr/lib/unipi/uhelper '' ULED5 1 $name"
-ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/x6-led", RUN+="/usr/lib/unipi/uhelper '' ULED6 1 $name"
 
 ACTION=="add", SUBSYSTEM=="tpm", DEVPATH=="*/spi6.1/*", RUN+="/usr/lib/unipi/uhelper tpm dev 1 $name"
 ACTION=="add", SUBSYSTEM=="tpmrm", DEVPATH=="*/spi6.1/*", RUN+="/usr/lib/unipi/uhelper tpm devrm 1 $name"
